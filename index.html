@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <meta charset=utf-8 />
+  <title>Farmer Suicides in India 2001-2014</title>
+
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
+  <link href="https://fonts.googleapis.com/css?family=Gentium+Basic|Noto+Serif" rel="stylesheet">
+
+
+	<style>
+
+		body { 
+            margin:0; padding:0; 
+            background-color: lightgrey;
+        }
+        .map_container {
+          width: 100%;
+          height: 707px;
+          border: 1px solid red;
+          margin-right: 10px;
+          float: left;
+        }
+        .map1 {
+            float: left;
+            width: 47%;
+            margin-left: 1.5%;
+            margin-right: 0.75%;
+            height: 707px;
+            border:1px solid grey;
+
+        }
+        
+        .map2 {
+          float: right;
+            width: 47%;
+            height: 707px;
+            margin-left: 0.75%;
+            margin-right: 1.5%;
+            border:1px solid grey;
+
+        }
+
+	    .map-legend i {
+	        width: 18px;
+	        height: 18px;
+	        float: left;
+	        margin-right: 8px;
+	        opacity: 0.7;
+	    }
+        
+	    .leaflet-popup-close-button {
+	        display: none;
+	    }
+	    .leaflet-popup-content-wrapper {
+	        pointer-events: none;
+	    }
+        h1{
+            margin-left: 10%;
+            color: darkcyan;
+        }
+        p {
+            text-align: justify;
+            margin-left: 10%;
+            margin-right: 10%;
+            font-family: 'Noto Serif', serif;
+            font-size: 20px;
+            opacity: 0.8;
+        }
+
+	</style>
+
+</head>
+
+<body>
+
+    <h1>Farmer Suicides in India from 2001 to 2014</h1>
+    <p>
+       With the recession of monsoons, the news stories of areas being declared drought hit will soon find their way into the newspapers. Every year, a great number of farmers commit suicide all across the country. The most common reason being poor harvest. This visualisation of choropleth maps attempts to highlight the change(if any) in the scenario over the last 15 years.
+    </p>
+    
+    <p>
+        As can be seen, North Eastern states generally have less number of deaths. This number increases as we go down the country, peaking around the middle belt. Punjab being a largely agragrian state has very few deaths thanks to its fertile soil, green revolution and continuous development plans. While it is joyous to note that the number of suicides committed in a state have gone down in most regions, it is extremely alarming that this number has gone up in Maharashtra. Vidarbha, a majority agrarian region of Maharashtra has historically been an area of low rainfall. Awareness of this issue should have lead to extra efforts to secure the livelihood of the farmers there.
+    </p>
+    
+    <p>
+        The visualisation has been made using MapBox and HTML, CSS, JS basics along with D3.js. 
+        Data has been sourced from data.gov.in "State-Wise Profession Profile Of Suicide Victim During 2014" and "State-Wise Profession Profile Of Suicide Victim During 2001-02" files.
+        The 2014 file had two professions which were relevant, "Agricultural Labourers" and "Farmers (Sub Total)", both of these were combined to arrive at the total number.
+    </p>
+    
+    <div id=map_container>
+        <div id='map1' class='map1'> </div>
+        <div id='map2' class='map2'> </div>
+    </div>
+    
+    <script id="popup-template" type="text/template">
+        <strong>{{state}} </strong> <br>
+        <strong>Year:  </strong>{{Year}} <br>
+        <strong>Number of Farmer Suicides: </strong>{{Total}} <br>
+    </script>
+
+<!-- <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script type="text/javascript" src="census-2011.js"></script>
+<script type="text/javascript" src="Data2001.js"></script>    
+<script type="text/javascript" src="map.js"></script>   
+
+</body>
+</html>
