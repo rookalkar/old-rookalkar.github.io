@@ -11,45 +11,7 @@
     </head>
 
     <body>
-        <h1> Educational Infrastructure Data Visualisation for Maharashtra</h1>
-        <p>The visualisation is a tool designed to identify extent of infrastructural facilities available across various geographical areas in the state of Maharashtra. </p>
-        
-        <p>A TreeMap graph has been used to plot the hierarchical data as a set of nested rectangles. Each branch of the tree is given a rectangle, which is then tiled with smaller rectangles representing sub-branches. The map allows for zoom across various levels of information aggregation: from Division, District, Block, Cluster, Village to the atomic level of Schools.</p>
-        
-        <p>The size of the rectangle is proportional to the size of student enrolment in that particular geographical area. This helps analyze the extent of impact of the existence of a particular facility. It also allows for the graph to not be distorted by geographical areas and resulting population density.</p>
-        
-        <p>The colours for each facility are chosen to have semantic meanings with water being blue, playgrounds being green and so on. The saturation of the colour represents the percentage of schools in that particular area having the selected facility. Thus, a darker colour would mean a higher percentage of schools having the facility.</p>
-        
-        <p>At a given point in time, the ‘parent’ rectangles represent the higher hierarchy with the smaller ‘children’ rectangles nested inside representing one level of hierarchy lower. On clicking a particular rectangle, the graph zooms in the parent of the clicked area. The graph also contains a ‘Breadcrumb Bar’ at the top. This bar keeps log of the user’s location in the information hierarchy. It can be used to zoom out and go to the earlier level of hierarchy.</p>
-        
-        <p>Infrastructural Data is available for over 1 lakh schools through the U-DISE system (Unified District Information System for Education). The data lists the availability of various facilities, such as Playgrounds, Electricity, Water, Mid-Day Meals, Medical Checkups, Ramps, Computer Aided Labs etc in the academic year 2014-15. This data was converted into a binary format of “has” and “has not”. Each data item was then aggregated across various geographical levels to achieve the hierarchical information architecture. For example, a village containing 2 schools one of which has electricity and one which does not would be represented as ‘50% schools having electricity’ and so on for higher levels of hierarchy.</p>
-        
-        <p>The tool can be extended to include other facilities and other states' data. </p>
-        
-        <p class="footer"> Guide: Venkatesh Rajamanickam | Created by: Ruchi Ookalkar, Arihant Parsoya | December 2016 <br /> Data Source: <a href="http://schoolreportcards.in/SRC-New/">UDISE</a></p>
-        
-        <br>
-        
-        <div id="dropdown">
-            <div >
-                <button class = "facility" value = "CAL">Computer Aided Lab</button>
-                <button class = "facility" value="MjClassrooms">Major Repair Classrooms</button>
-                <button class = "facility" value="MnClassrooms">Minor Repair Classrooms</button>
-                <button class = "facility" value="GClassrooms">Good Classrooms</button>
-                <button class = "facility" value="Medical">Medical Checkup</button>
-                <button class = "facility" value="Playground">Playground</button>
-                <button class = "facility" value="Electricity" selected>Electricity</button>
-                <button class = "facility" value="Meal">Mid Day Meal</button>
-                <button class = "facility" value="Ramp">Ramp</button>
-                <button class = "facility" value="Water">Water</button>
-                <button class = "facility" value="Library">Library</button>
-            </div>
-            
-        </div>
-        
-        <div id="chart">
-            <svg></svg>
-        </div>
+        <a href="DISE_VIZ/"> Go here</a>
         
         
         
