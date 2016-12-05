@@ -1,0 +1,122 @@
+            @font-face
+            {
+                font-family: Dosis;
+                src: /Dosis/Dosis-Medium.tiff ;
+            }
+            #chart {
+              background: #fff;
+/*                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+/*                font-family: 'Open Sans Condensed', sans-serif;*/
+                font-family: "Dosis";
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            #dropdown{
+                display: flex;
+                justify-content: center;
+/*
+                margin: auto;
+                margin-left: 27%;
+*/
+            }
+
+            .facility{
+                margin: auto;
+                height: 22px;
+                border-radius: 4px;
+                background-color: white;
+                border: 1px solid #ee9700;
+            }
+
+            .ctext{
+                font-family: "Dosis";
+                font-size: "small";
+            }
+
+            .title {
+                font-family: "Dosis";
+                font-weight: bold;
+                font-size: 24px;
+                text-align: center;
+                margin: auto;
+                margin-top: 8px;
+                margin-bottom: 8px;
+                
+            }
+            text {
+              pointer-events: none;
+            }
+
+            .grandparent text {
+              font-weight: bold;
+            }
+
+            rect {
+              fill: none;
+              stroke: #fff;
+            }
+
+            rect.parent,
+            .grandparent rect {
+              stroke-width: 2px;
+            }
+
+            rect.parent {
+                pointer-events: none;
+            }
+
+            .grandparent rect {
+              fill: orange;
+            }
+
+            .grandparent:hover rect {
+              fill: #ee9700;
+            }
+
+            .children rect.parent,
+            .grandparent rect {
+              cursor: pointer;
+            }
+
+            .children rect.parent {
+/*              fill: #bbb;*/
+              fill-opacity: .5;
+            }
+
+            .children:hover rect.child {
+                opacity: 1;
+            }
+
+            .children:hover rect{
+              /*  fill: #ee9700 !important;  */
+                opacity: 1;
+
+            }
+            #hover-effect{
+              fill: white !important;
+              opacity: 0.2 !important;
+              z-index : 99;
+              pointer-events: none;
+            }
+
+            
+            p,h1{
+                width: 1000px;
+                margin-left: 9%;
+                font-family: 'Lato', sans-serif;
+                font-weight: lighter;
+                line-height: 20px;
+            }
+            h1{
+                font-size: 25px;
+                text-align: center;
+                font-weight: 2px;
+            }
+            .footer{
+                font-size: 12px;
+            }
+legend{
+    transform:rotate(90deg);
+}
